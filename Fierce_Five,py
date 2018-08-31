@@ -1,4 +1,4 @@
-f = open("Fierce_Five.txt", "a")
+f = open("Fierce_Five.txt", "w")
 
 def main():
     week = input("Week/Date: ")
