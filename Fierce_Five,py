@@ -1,0 +1,73 @@
+f = open("Fierce_Five.txt", "a")
+
+def main():
+    week = input("Week/Date: ")
+    f.write(week + "\n")
+    
+    while True:
+        routine = input("Routine A or B: ")
+        if routine == 'A' or routine == 'B':
+            break
+    if routine == 'A':
+         sqt = input("Squat: ")
+         bch = input("Bench: ")
+         pr = input("Pendlay row: ")
+         fp = input("Face pulls: ")
+         cr = input ("Calf raises: ")
+         tp = input("Tricep pressdowns: ")
+         lifts_a = ("Squat 3x5: " + sqt + " lbs" + "\n" + "Bench 3x5: " + bch + " lbs" + "\n" + "Pendlay row 3x5: " + pr + " lbs" + "\n" +
+          "Face pulls 3x10: " + fp + " lbs" + "\n" + "Calf raises 2x15: " + cr + " lbs" + "\n" + "Tricep pressdowns 2x10: " + tp + " lbs" + "\n")
+         f.write("------------------ \n")
+         f.write(routine + ":" + "\n")
+         f.write(lifts_a + "\n")
+    else:
+         if routine == 'B':
+            fs = input("Front squat: ")
+            ohp = input("OHP: ")
+            rdl = input("RDL: ")
+            lpd = input("Lat pulldows: ")
+            ab = input("Abs: ")
+            bc = input("Bicep Curls: ")
+            lifts_b = ("Front Squat 3x5: " + fs + " lbs" + "\n" + "OHP 3x5: " + ohp + " lbs " + "\n" + "RDL 3x8: " + rdl + " lbs" + "\n" +
+             "Lat pulldowns 3x8: " + lpd + " lbs" + "\n" + "Abs 2x15: " + ab + "\n" + "Bicep curls 2x10: " + bc + " lbs" + "\n")
+            f.write("------------------ \n")
+            f.write(routine + ":" + "\n")
+            f.write(lifts_b + "\n")       
+            
+def appnd():
+    while True:
+        routine = input("Routine A or B: ")
+        if routine == "A" or routine == "B":
+            break
+    if routine == "A":
+         sqt = input("Squat: ")
+         bch = input("Bench: ")
+         pr = input("Pendlay row: ")
+         fp = input("Face pulls: ")
+         cr = input ("Calf raises: ")
+         tp = input("Tricep pressdowns: ")
+         lifts_a = ("Squat 3x5: " + sqt + " lbs" + "\n" + "Bench 3x5: " + bch + " lbs" + "\n" + "Pendlay row 3x5: " + pr + " lbs" + "\n" +
+          "Face pulls 3x10: " + fp + " lbs" + "\n" + "Calf raises 2x15: " + cr + " lbs" + "\n" + "Tricep pressdowns 2x10: " + tp + " lbs" + "\n")
+         f.write(routine + ":" + "\n")
+         f.write(lifts_a + "\n")
+    else:
+         if routine == "B":
+            fs = input("Front squat: ")
+            ohp = input("OHP: ")
+            rdl = input("RDL: ")
+            lpd = input("Lat pulldows: ")
+            ab = input("Abs: ")
+            bc = input("Bicep Curls: ")
+            lifts_b = ("Front Squat 3x5: " + fs + " lbs" + "\n" + "OHP 3x5: " + ohp + " lbs " + "\n" + "RDL 3x8: " + rdl + " lbs" + "\n" +
+             "Lat pulldowns 3x8: " + lpd + " lbs" + "\n" + "Abs 2x15: " + ab + "\n" + "Bicep curls 2x10: " + bc + " lbs" + "\n")
+            f.write(routine + ":" + "\n")
+            f.write(lifts_b + "\n")
+    
+cnt = input("Are you appending data, or submitting a new week? A for APPEND, N for NEW: ")
+if cnt == "N":
+        main()
+else:
+    if cnt == "A":
+        appnd()
+
+f.close()
